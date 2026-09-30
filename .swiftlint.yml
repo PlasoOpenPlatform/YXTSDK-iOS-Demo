@@ -1,0 +1,33 @@
+disabled_rules:
+  - trailing_whitespace
+  - line_length
+opt_in_rules: []
+included:
+  - YXTSDKDemo
+excluded:
+  - Pods
+  - vendor
+file_length:
+  warning: 400
+  error: 400
+type_body_length:
+  warning: 300
+  error: 350
+function_body_length:
+  warning: 80
+  error: 100
+cyclomatic_complexity:
+  warning: 12
+  error: 20
+nesting:
+  type_level: 2
+  function_level: 3
+identifier_name:
+  min_length:
+    warning: 2
+  excluded:
+    - id
+    - x
+    - y
+    - vc
+reporter: "xcode"

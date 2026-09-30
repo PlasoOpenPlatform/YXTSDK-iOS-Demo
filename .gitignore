@@ -1,0 +1,66 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Xcode — user data & build products
+build/
+DerivedData/
+*.moved-aside
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata/
+*.xccheckout
+*.xcscmblueprint
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+timeline.xctimeline
+playground.xcworkspace
+
+# XcodeGen / CocoaPods 生成物（用 project.yml + Podfile 重建）
+YXTSDKDemo.xcodeproj/
+YXTSDKDemo.xcworkspace/
+
+# CocoaPods（保留 Podfile.lock，便于复现依赖版本）
+Pods/
+
+# Swift Package Manager
+.build/
+.swiftpm/
+Packages/
+Package.resolved
+
+# SwiftLint / IDE
+.swiftlint.yml.cache
+*.swp
+*~.nib
+*.log
+
+# Secrets / local env
+.env
+.env.*
+!.env.example
+
+# Tooling / misc
+*.orig
+*.bak
+.idea/
+.vscode/
+*.xcframework.zip

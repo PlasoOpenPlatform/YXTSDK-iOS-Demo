@@ -1,0 +1,49 @@
+# XcodeGen 工程描述：生成可对外分发的 YXT SDK Demo
+name: YXTSDKDemo
+options:
+  bundleIdPrefix: cn.plaso
+  deploymentTarget:
+    iOS: "13.0"
+  createIntermediateGroups: true
+  groupSortPosition: top
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    TARGETED_DEVICE_FAMILY: "1,2"
+    IPHONEOS_DEPLOYMENT_TARGET: "13.0"
+    CLANG_ENABLE_MODULES: YES
+    ENABLE_BITCODE: NO
+targets:
+  YXTSDKDemo:
+    type: application
+    platform: iOS
+    deploymentTarget: "13.0"
+    sources:
+      - path: YXTSDKDemo
+        excludes:
+          - "**/.DS_Store"
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: cn.plaso.yxtsdkdemo
+        PRODUCT_NAME: YXTSDKDemo
+        INFOPLIST_FILE: YXTSDKDemo/Resources/Info.plist
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        MARKETING_VERSION: "1.0.0"
+        CURRENT_PROJECT_VERSION: "1"
+        CODE_SIGN_STYLE: Automatic
+        OTHER_LDFLAGS: "$(inherited) -ObjC"
+        ENABLE_BITCODE: NO
+        SWIFT_OBJC_BRIDGING_HEADER: YXTSDKDemo/YXTSDKDemo-Bridging-Header.h
+        "EXCLUDED_ARCHS[sdk=iphonesimulator*]": "$(inherited) arm64"
+    scheme:
+      testTargets: []
+      gatherCoverageData: false
+schemes:
+  YXTSDKDemo:
+    build:
+      targets:
+        YXTSDKDemo: all
+    run:
+      config: Debug
+    archive:
+      config: Release
